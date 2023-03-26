@@ -5,7 +5,6 @@ import mk.ukim.finki.emtlablibraryapp.model.Category;
 
 @Data
 public class BookDto {
-    private Long id;
     private String name;
     private Category category;
     private Long authorId;

@@ -40,7 +40,7 @@ public class CountryRestController {
 
     @PutMapping("/edit/{id}")
     private ResponseEntity<Country> save(@PathVariable Long id, @RequestBody CountryDto countryDto) {
-        return this.countryService.save(countryDto.getName(), countryDto.getContinent())
+        return this.countryService.edit(id, countryDto.getName(), countryDto.getContinent())
                 .map(country -> ResponseEntity.ok().body(country))
                 .orElseGet(() -> ResponseEntity.badRequest().build());
     }

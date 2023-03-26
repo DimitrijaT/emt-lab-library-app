@@ -8,18 +8,19 @@ import lombok.Data;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue()
     @Column(name = "id", nullable = false)
     private Long id;
 
     private String name;
 
+    @Enumerated(EnumType.STRING)
     private Category category;
 
     @ManyToOne
     private Author author;
 
-    private int availableCopies;
+    private Integer availableCopies;
 
     public Book() {
     }

@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class Country {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue()
     @Column(name = "id", nullable = false)
     private Long id;
 
